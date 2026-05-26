@@ -1,0 +1,18 @@
+server:
+  port: "8080"
+
+appName: "gateway-demo"
+
+config:
+  message: "Hello from Git Config (Dev Environment)"
+
+gateway:
+  filter:
+    enabled: true
+    allowed-ips:
+      - "127.0.0.1"
+      - "192.168.1.0/24"
+    blocked-paths:
+      - "/admin/**"
+  route:
+    connect-timeout: 5000
